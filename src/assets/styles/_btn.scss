@@ -1,0 +1,21 @@
+@use "../styles/variavles" as *;
+@use "sass:color";
+.btn{
+    display: inline-block;
+  margin: 5px 10px 5px 0;
+  padding: 8px 14px;
+  background: $main-color;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s;
+  &:hover{
+    // background: darken($main-color, 20%);
+    background: color.adjust($main-color, $lightness: -20%);
+  }
+  &.del{
+    background-color: $del-color;
+    &:hover{background: color.adjust($del-color,$lightness: -20%);}
+
+  }
+}
